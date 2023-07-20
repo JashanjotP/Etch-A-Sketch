@@ -1,13 +1,9 @@
 .container{
     box-sizing: content-box;
     display: grid;
-    height: 49vw;
-    width: 49vw;
-    border: 1px rgba(0, 0, 0, 0.404) solid;
-    
+    height: 45vw;
+    width: 45vw;    
 }
-
 .cell{
-
     border: 1px solid black;
 }
