@@ -4,6 +4,8 @@ const sliderValue = document.querySelector(".rangeValue");
 const eraser  = document.querySelector(".Eraser");
 const rainbow  = document.querySelector(".Rainbow");
 const clear = document.querySelector(".clear")
+const own = document.querySelector(".yours");
+const ownColour = document.querySelector(".own-input");
 
 
 let boxes = slider.value
@@ -20,6 +22,9 @@ let colourChoice = "rainbow";
         colourChoice = "rainbow";
 
     });
+    own.addEventListener("click",()=>{
+        colourChoice = "user";
+    })
 
     
 
@@ -42,6 +47,9 @@ for(let i =0; i<boxes*boxes; i++){
         }
         else if(colourChoice === "erase"){
             div.style.backgroundColor = "white";
+        }
+        else if(colourChoice === "user"){
+            div.style.backgroundColor = `${ownColour.value}`;
         }
     });
     
@@ -79,6 +87,9 @@ slider.addEventListener('input', () => {
             }
             else if(colourChoice === "erase"){
                 div.style.backgroundColor = "white";
+            }
+            else if(colourChoice === "user"){
+                div.style.backgroundColor = `${ownColour.value}`;
             }
         });
         
